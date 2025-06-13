@@ -1,0 +1,111 @@
+:root {
+  --bg-light: #f3f4f6;
+  --bg-dark: #1e1e1e;
+  --text-light: #111;
+  --text-dark: #f4f4f4;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.4s, color 0.4s;
+  padding: 20px;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body.dark .app {
+  background: #2c2c2c;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.settings {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input[type="text"],
+form input[type="date"],
+input[type="color"] {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--primary-hover);
+}
+
+ul#taskList {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.task {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.task.done {
+  background-color: #d1fae5;
+  text-decoration: line-through;
+  color: #065f46;
+}
+
+.task .controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

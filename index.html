@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Tamer</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <h1>📋 Task Tamer</h1>
+
+    <!-- CONTROLES DE TEMA E COR -->
+    <div class="settings">
+      <label>
+        🌗 Modo Noturno:
+        <input type="checkbox" id="themeToggle">
+      </label>
+
+      <label>
+        🎨 Cor de fundo:
+        <input type="color" id="bgColorPicker" />
+      </label>
+    </div>
+
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="Digite sua tarefa..." required />
+      <input type="date" id="taskDate" required />
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
